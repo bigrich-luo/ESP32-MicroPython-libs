@@ -1,4 +1,4 @@
-# MicroPython SSD1306 OLED driver, I2C and SPI interfaces M
+# MicroPython SSD1306 OLED driver, I2C and SPI interfaces Modified by Bigrich-Luo
  
 import time
 import framebuf
