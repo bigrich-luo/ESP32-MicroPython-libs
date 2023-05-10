@@ -1,4 +1,6 @@
-# ESP32-MicroPython-ssd1306
+# ESP32-MicroPython-libs
+
+## SSD1306
 A fork of the driver for SSD1306 displays to solve "AttributeError: 'Pin' object has no attribute 'high'" when using spi.
 解决 SSD1306 使用 SPI 时出现 "AttributeError: 'Pin' object has no attribute 'high'" 的问题
 
@@ -59,6 +61,20 @@ oled.text("hello",40,28,1)
 # 显示
 oled.show()
 
+```
+
+## ULN2003
+
+A driver for ULN2003
+
+```python
+from machine import Pin
+from libs.uln2003 import Uln2003
+
+
+motor = Uln2003(pin1=Pin(13), pin2=Pin(12), pin3=Pin(14), pin4=Pin(27), delay=2, mode='HALF_STEP')
+
+motor.angle(180)
 ```
 
 
