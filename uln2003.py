@@ -2,23 +2,23 @@ import time
 
 # only test for uln2003
 class Uln2003:
-    FULL_ROTATION = int(4075.7728395061727 / 8) # http://www.jangeox.be/2013/10/stepper-motor-28byj-48_25.html
+    FULL_ROTATION = int(4075.7728395061727 / 8)
 
     HALF_STEP = [
-        [0, 0, 0, 1],
-        [0, 0, 1, 1],
-        [0, 0, 1, 0],
-        [0, 1, 1, 0],
-        [0, 1, 0, 0],
-        [1, 1, 0, 0],
         [1, 0, 0, 0],
+        [1, 1, 0, 0],
+        [0, 1, 0, 0],
+        [0, 1, 1, 0],
+        [0, 0, 1, 0],
+        [0, 0, 1, 1],
+        [0, 0, 0, 1],
         [1, 0, 0, 1],
     ]
 
     FULL_STEP = [
-        [1, 0, 1, 0],
+        [1, 1, 0, 0],
         [0, 1, 1, 0],
-        [0, 1, 0, 1],
+        [0, 0, 1, 1],
         [1, 0, 0, 1]
     ]
     def __init__(self, pin1, pin2, pin3, pin4, delay, mode='FULL_STEP'):
