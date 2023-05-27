@@ -50,8 +50,16 @@ motor.angle(180)
 ```
 
 
+## SD Card
 
+A driver for sd card
 
+```python
+import machine, sdcard, os
+sd = sdcard.SDCard(machine.SPI(1), machine.Pin(15))
+os.mount(sd, '/sd')
+print(os.listdir('/'))
+```
 
 
 
